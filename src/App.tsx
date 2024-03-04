@@ -397,7 +397,7 @@ function App (){
 
     // retornos na tela
     return(      
-        <div className='flex w-full flex-col overflow-x-auto bg-blue-700'>
+        <div className='flex w-full flex-col overflow-x-auto bg-gray-700'>
             <p id="Home"></p> {/*Mapa para o botão Home vir para o início da página*/}
             <Menu language={language}/> {/* Chamando a função do menu superior */}
             <Picture language={language} ChangeLanguage={EditLanguage}/> {/* Chamando função de imagem e texto de apresentação*/}
