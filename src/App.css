@@ -10,7 +10,8 @@
 
 @keyframes flash {
     0% {
-        background: #4a5568; /* Cinza escuro */
+        background: #0759e6;
+        /*background: #4a5568; /* Cinza escuro */
     }
     10% {
         background: #5a6575; /* Mais claro */
