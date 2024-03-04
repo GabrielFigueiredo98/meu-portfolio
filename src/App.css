@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.flash{
+    animation-name: flash;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes flash {
+    0% {
+        background: #4a5568; /* Cinza escuro */
+    }
+    10% {
+        background: #5a6575; /* Mais claro */
+    }
+    20% {
+        background: #6a7482; /* Mais claro ainda */
+    }
+    30% {
+        background: #7a8190; /* Mais claro ainda */
+    }
+    40% {
+        background: #8a8e9e; /* Mais claro ainda */
+    }
+    50% {
+        background: #9a9eac; /* Mais claro ainda */
+    }
+    60% {
+        background: #aab5ba; /* Mais claro ainda */
+    }
+    70% {
+        background: #bac2c8; /* Mais claro ainda */
+    }
+    80% {
+        background: #cad2d6; /* Mais claro ainda */
+    }
+    90% {
+        background: #dbe0e3; /* Mais claro ainda */
+    }
+    100% {
+        background: #eceff1; /* Cinza muito claro */
+    }
+}
