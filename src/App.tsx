@@ -23,20 +23,20 @@ import './App.css'
 // função para imprimir o menu superior da tela
 function Menu({language}:{language:number}){
     return (
-        <div className="flex fixed top-0 right-0 z-50 w-full justify-end p-1 bg-gray-600 text-white shadow-md">
+        <div className="flex fixed top-0 right-0 z-50 w-full justify-center lg:justify-end p-1 bg-gray-600 text-white shadow-md text-xs sm:text-base">
             
             {/*Botão Linkedin*/}
             <a 
-                className='bg-gray-600 text-white flex flex-col rounded w-[40px] h-[40px] font-bold transition duration-500 ease-in-out mr-4 mt-1'
+                className='bg-gray-600 text-white flex flex-col rounded w-[40px] h-[40px] font-bold transition duration-500 ease-in-out mr-2 sm:mr-4 mt-3 sm:mt-1'
                 href="https://www.linkedin.com/in/gabriel-figueiredo-971047288/"
                 target="_blank" rel="noopener noreferrer"
                 style={{ cursor: "pointer" }}
             >
-                <img src={IconLinkedin} alt="Ícone Linkedin" className="h-10 w-10 pointer-events-none" />
+                <img src={IconLinkedin} alt="Ícone Linkedin" className="h-8 w-8 sm:h-10 sm:w-10 pointer-events-none" />
             </a>
             {/*Botão HOME*/}
             <a 
-                className='bg-gray-600 text-white flex flex-col rounded w-[40px] h-[40px] font-bold transition duration-500 ease-in-out mr-7 mt-3'
+                className='bg-gray-600 text-white flex flex-col rounded w-[40px] h-[40px] font-bold transition duration-500 ease-in-out mr-4 sm:mr-7 mt-5 sm:mt-3'
                 href="#Home"
                 style={{ cursor: "pointer" }}
             >
@@ -44,7 +44,7 @@ function Menu({language}:{language:number}){
             </a>           
             {/*Botão Sobre*/}
             <a 
-                className='bg-gray-600 text-white flex flex-col rounded w-[40px] h-[40px] font-bold transition duration-500 ease-in-out mr-6 mt-3'
+                className='bg-gray-600 text-white flex flex-col rounded w-[40px] h-[40px] font-bold transition duration-500 ease-in-out mr-4 sm:mr-6 mt-5 sm:mt-3'
                 href="#About"
                 style={{ cursor: "pointer" }}
             >
@@ -52,7 +52,7 @@ function Menu({language}:{language:number}){
             </a>
             {/*Botão Qualificações*/}
             <a 
-                className='bg-gray-600 text-white flex flex-col rounded w-[40px] h-[40px] font-bold transition duration-500 ease-in-out mr-20 mt-3'
+                className='bg-gray-600 text-white flex flex-col rounded w-[40px] h-[40px] font-bold transition duration-500 ease-in-out mr-12 sm:mr-20 mt-5 sm:mt-3'
                 href="#Qualifications"
                 style={{ cursor: "pointer" }}
             >
@@ -60,7 +60,7 @@ function Menu({language}:{language:number}){
             </a>
             {/*Botão Projetos*/}
             <a 
-                className='bg-gray-600 text-white flex flex-col rounded w-[40px] h-[40px] font-bold transition duration-500 ease-in-out mr-10 mt-3'
+                className='bg-gray-600 text-white flex flex-col rounded w-[40px] h-[40px] font-bold transition duration-500 ease-in-out mr-6 sm:mr-10 mt-5 sm:mt-3'
                 href="#Projects"
                 style={{ cursor: "pointer" }}
             >
@@ -68,7 +68,7 @@ function Menu({language}:{language:number}){
             </a>
             {/*Botão Contatos*/}
             <a 
-                className='bg-gray-600 text-white flex flex-col rounded w-[40px] h-[40px] font-bold transition duration-500 ease-in-out mr-10 mt-3'
+                className='bg-gray-600 text-white flex flex-col rounded w-[40px] h-[40px] font-bold transition duration-500 ease-in-out mr-4 sm:mr-10 mt-5 sm:mt-3'
                 href="#Contacts"
                 style={{ cursor: "pointer" }}
             >
@@ -112,7 +112,7 @@ function Picture ({language, ChangeLanguage}:{language:number, ChangeLanguage:()
         }, [text, delay]); // Dependências do efeito: 'text' e 'delay'
 
         // Retorna o componente com o texto exibido
-        return <div style={{ fontSize: "30px", fontFamily: "Pacifico, cursive"}}>{displayText}</div>;
+        return <div  className="text-lg sm:text-4xl"style={{fontFamily: "Pacifico, cursive"}}>{displayText}</div>;
     };
       
     const [phrase, setPhrase] = useState("Olá, eu me chamo Gabriel.");
@@ -137,17 +137,17 @@ function Picture ({language, ChangeLanguage}:{language:number, ChangeLanguage:()
             <div  className="flex flex-row justify-start  p-4 text-white mt-4"> 
                 <h1><br/><br/><br/></h1> {/* Gambiarra pra dar espaço do Menu superior */}
                 
-                <h1 className='flex justify-start mr-4 mt-16'> {language === 1 ? 'Language(Linguagem):' : 'Linguagem(Language):'} </h1> {/*Frase Linguagem*/}
+                <h1 className='text-xs sm:text-base flex justify-start mr-2 sm:mr-4 mt-16'> {language === 1 ? 'Language(Linguagem):' : 'Linguagem(Language):'} </h1> {/*Frase Linguagem*/}
                 
                 {/*Botão para mudar linguagem*/}
-                <button className='bg-gray-400 text-white flex rounded w-[42px] h-[42px] font-bold transition duration-500 ease-in-out mr-10 mt-14 border hover:bg-green-300' onClick={() => { ChangeLanguage(); toggleLanguage();}}>
-                    {language === 1 ? <img src={IconEUA} alt="Ícone EUA" className="h-10 w-10 pointer-events-none select-none" /> : <img src={IconBrazil} alt="Ícone Brasil" className="h-10 w-10 pointer-events-none select-none" />}
+                <button className='bg-gray-400 text-white flex rounded w-[32px] h-[32px] sm:w-[42px] sm:h-[42px] font-bold transition duration-500 ease-in-out mr-10 mt-14 border hover:bg-green-300' onClick={() => { ChangeLanguage(); toggleLanguage();}}>
+                    {language === 1 ? <img src={IconEUA} alt="Ícone EUA" className="h-7.5 w-8 sm:h-10 sm:w-10 pointer-events-none select-none" /> : <img src={IconBrazil} alt="Ícone Brasil" className="h-7.5 w-8 sm:h-10 sm:w-10 pointer-events-none select-none" />}
                 </button>
             </div>
             
             {/*Bloco das outras funções*/}
             <div  className="flex flex-col items-center  p-4 text-white mt-4"> 
-                <h1 style={{fontSize: "30px", fontFamily: "Pacifico, cursive"}}> {language === 1 ? 'Computer engineer' : 'Engenheiro da Computação'} </h1> {/*Frase Linguagem*/}
+                <h1 className='text-lg sm:text-4xl' style={{fontFamily: "Pacifico, cursive"}}> {language === 1 ? 'Computer engineer' : 'Engenheiro da Computação'} </h1> {/*Frase Linguagem*/}
                 <img src={MyPicture} alt="Minha Foto" className="w-64 h-64 rounded-full object-cover mx-auto mt-4 mb-4 pointer-events-none select-none" />
                 <TypewriterEffect text={phrase} delay={delay}/>
             </div>
@@ -158,7 +158,7 @@ function Picture ({language, ChangeLanguage}:{language:number, ChangeLanguage:()
 // função parte "Sobre"
 function About ({language}:{language:number}){
     return (
-        <div className= "flex flex-col p-4 text-white bg-gray-600 mt-14 max-w-3x4 w-3/4 mr-auto rounded-xl animate-walk">
+        <div className= "flex flex-col p-4 text-white bg-gray-600 sm:mt-14 max-w-3x4 w-3/4 mr-auto rounded-xl animate-walk">
             <h1 style={{fontSize: "30px"}}> {language === 1 ? <b>About:</b> : <b>Sobre:</b>} </h1>
             {language === 1 ?
                 <h2>  <br/>Hello! I am a professional graduated in <b>Computer Engineering</b> from Minas Gerais State University (UEMG), with a burning passion for creating innovative and efficient solutions in the world of technology. My journey has been marked by an <b>incessant exploration of different programming environments</b>, using a <b>variety of programming languages</b> to develop responsive applications and systems.<br/><br/>
@@ -404,16 +404,16 @@ function App (){
             <br/><br/>
             
             {/*Div dos simbolos das linguagens animados (animate-walk foi colocado no arquivo tailwind.config.js)*/}
-            <div className='min-h-[150px] relative flex flex-row lg:px-[20%] justify-center items-center animate-walk'>
-                <img src={IconC} alt="Ícone C" className="h-12 w-12 mr-36" onClick={CClick} draggable="false"/>
-                <img src={IconCMM} alt="Ícone C++" className="h-12 w-12 mr-36" onClick={CMMClick} draggable="false"/>
-                <img src={IconCS} alt="Ícone C#" className="h-12 w-12 mr-36" onClick={CSClick} draggable="false"/>
-                <img src={IconCSS} alt="Ícone CSS" className="h-12 w-12 mr-36" onClick={CSSClick} draggable="false"/>
-                <img src={IconHTML} alt="Ícone HTML" className="h-10 w-15 mr-36" onClick={HTMLClick} draggable="false"/>
-                <img src={IconJava} alt="Ícone Java" className="h-12 w-12 mr-36" onClick={JavaClick} draggable="false"/>
-                <img src={IconJS} alt="Ícone JavaScript" className="h-10 w-15 mr-36" onClick={JSClick} draggable="false"/>
-                <img src={IconPython} alt="Ícone Python" className="h-12 w-12 mr-36" onClick={PythonClick} draggable="false"/>
-                <img src={IconTS} alt="Ícone TypeScript" className="h-12 w-12" onClick={TSClick} draggable="false"/>
+            <div className='min-h-[100px] relative flex flex-row sm:px-[5%] md:px-[20%] xl:px-[30%] 2xl:mt-10 justify-center items-center animate-walk'>
+                <img src={IconC} alt="Ícone C" className="h-7 w-7 sm:h-8 sm:w-8 md:h-8 md:w-8 xl:h-12 xl:w-12 xl:ml-14 mr-2 sm:mr-4 md:mr-7 xl:mr-20" onClick={CClick} draggable="false"/>
+                <img src={IconCMM} alt="Ícone C++" className="h-7 w-7 sm:h-8 sm:w-8 md:h-8 md:w-8 xl:h-12 xl:w-12 mr-2 sm:mr-4 md:mr-7 xl:mr-20" onClick={CMMClick} draggable="false"/>
+                <img src={IconCS} alt="Ícone C#" className="h-7 w-7 sm:h-8 sm:w-8 md:h-8 md:w-8 xl:h-12 xl:w-12 mr-2 sm:mr-4 md:mr-7 xl:mr-20" onClick={CSClick} draggable="false"/>
+                <img src={IconCSS} alt="Ícone CSS" className="h-7 w-7 sm:h-8 sm:w-8 md:h-8 md:w-8 xl:h-12 xl:w-12 mr-2 sm:mr-4 md:mr-7 xl:mr-20" onClick={CSSClick} draggable="false"/>
+                <img src={IconHTML} alt="Ícone HTML" className="h-5 w-10 sm:h-6 sm:w-20 md:h-7 md:w-20 xl:h-8 xl:w-20 mr-2 sm:mr-4 md:mr-7 xl:mr-20" onClick={HTMLClick} draggable="false"/>
+                <img src={IconJava} alt="Ícone Java" className="h-7 w-7 sm:h-8 sm:w-8 md:h-8 md:w-8 xl:h-12 xl:w-12 mr-2 sm:mr-4 md:mr-7 xl:mr-20" onClick={JavaClick} draggable="false"/>
+                <img src={IconJS} alt="Ícone JavaScript" className="h-5 w-10 sm:h-6 sm:w-20 md:h-7 md:w-20 xl:h-8 xl:w-20 mr-2 sm:mr-4 md:mr-7 xl:mr-20" onClick={JSClick} draggable="false"/>
+                <img src={IconPython} alt="Ícone Python" className="h-7 w-7 sm:h-8 sm:w-8 md:h-8 md:w-8 xl:h-12 xl:w-12 mr-2 sm:mr-4 md:mr-7 xl:mr-20" onClick={PythonClick} draggable="false"/>
+                <img src={IconTS} alt="Ícone TypeScript" className="h-7 w-7 sm:h-8 sm:w-8 md:h-8 md:w-8 xl:h-12 xl:w-12 md:mr-7 xl:mr-20" onClick={TSClick} draggable="false"/>
             </div>
 
             <br/> <br/>
